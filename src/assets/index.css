@@ -1,0 +1,14 @@
+:root{
+    --main-red: #C62828 ;
+    --main-black:#212121 ;
+    --main-grey: #E0E0E0  ;
+    --main-white: #FAFAFA ;
+    --main-blue: #283593;
+}
+
+body{
+    box-sizing: border-box;
+    margin:0;
+    background: var(--main-white);
+    color: var(--main-black);
+}
