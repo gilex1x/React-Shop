@@ -11,7 +11,15 @@ module.exports ={
         publicPath: '/'
     },
     resolve:{
-        extensions:['.js','.jsx']
+        extensions:['.js','.jsx'],
+        alias:{
+            '@assets':path.resolve(__dirname,'src/assets'),
+            '@images': path.resolve(__dirname,'src/assets/images'),
+            '@components':path.resolve(__dirname,'src/components'),
+            '@template':path.resolve(__dirname, 'src/template'),
+            '@pages': path.resolve(__dirname,'src/pages'),
+            '@routes': path.resolve(__dirname,'src/routes')
+        }
     },
     module:{
         rules:[

@@ -1,5 +1,5 @@
 import React from 'react'
-import Logo from '../assets/Images/SkullGeek.jpg'
+import Logo from '../assets/images/SkullGeek.jpg'
 const Header = () => {
     return (
         <header>
