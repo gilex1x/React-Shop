@@ -1,17 +1,24 @@
 import React from 'react'
-import Logo from '../assets/images/SkullGeek.jpg'
+import Logo from '@images/SkullGeek.png'
+import '@styles/Header.css';
 const Header = () => {
     return (
-        <header>
-            <nav>
-                <ul>
-                    <li>
-                        <img src={Logo} width='10%'/>
+        <header className='header'>
+            <nav className='nav-container'>
+                    <img src={Logo} width='5%' alt='Logo Geek Things'/>
+                <ul className='nav-menu'>
+                    <li className='nav-menu__item'>
+                        Inicio
                     </li>
-                    <li>Inicio</li>
-                    <li>Productos</li>
-                    <li>Categorias</li>
-                    <li>Nosotros</li>
+                    <li className='nav-menu__item'>
+                        Productos
+                    </li>
+                    <li className='nav-menu__item'>
+                        Categorias
+                    </li>
+                    <li className='nav-menu__item'>
+                        Nosotros
+                    </li>
                 </ul>
             </nav>
         </header>

@@ -1,9 +1,19 @@
 import React from 'react'
+import '@styles/Card.css'
 
 
 const Card = () => {
     return (
-        <h2>Soy una tejeta de producto</h2>
+        <div className='card'>
+            <div className='card-image'>
+                <img src='' alt='imagen producto'/>
+            </div>
+            <div className='card-description'>
+                <h3>Nombre producto</h3>
+                <span>Precio</span>
+                <button>AGREGAR AL CARRITO</button>
+            </div>
+        </div>
     );
 }
 
