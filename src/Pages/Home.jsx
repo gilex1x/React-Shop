@@ -1,6 +1,6 @@
-import React from 'react'
-import Card from '@components/Card'
-import Products from '@template/Products'
+import React from 'react';
+import Card from '@components/Card';
+import Products from '@template/Products';
 
 
 const Home = () => {
