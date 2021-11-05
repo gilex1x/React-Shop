@@ -13,13 +13,15 @@ module.exports ={
     resolve:{
         extensions:['.js','.jsx'],
         alias:{
-            '@assets':path.resolve(__dirname,'/src/assets'),
-            '@styles':path.resolve(__dirname,'/src/assets/styles'),
-            '@images': path.resolve(__dirname,'/src/assets/images'),
-            '@components':path.resolve(__dirname,'/src/components'),
-            '@template':path.resolve(__dirname, '/src/template'),
-            '@pages': path.resolve(__dirname,'/src/pages'),
-            '@routes': path.resolve(__dirname,'/src/routes')
+            '@assets':path.resolve(__dirname,'/src/Assets'),
+            '@actions': path.resolve(__dirname,('/src/Redux/Actions')),
+            '@reducers': path.resolve(__dirname,('/src/Redux/Reducers')),
+            '@styles':path.resolve(__dirname,'/src/Assets/styles'),
+            '@images': path.resolve(__dirname,'/src/Assets/images'),
+            '@components':path.resolve(__dirname,'/src/Components'),
+            '@template':path.resolve(__dirname, '/src/Template'),
+            '@pages': path.resolve(__dirname,'/src/Pages'),
+            '@routes': path.resolve(__dirname,'/src/Routes')
         }
     },
     module:{
