@@ -19,7 +19,7 @@ module.exports ={
             '@styles':path.resolve(__dirname,'/src/Assets/styles'),
             '@images': path.resolve(__dirname,'/src/Assets/images'),
             '@components':path.resolve(__dirname,'/src/Components'),
-            '@template':path.resolve(__dirname, '/src/Template'),
+            '@template':path.resolve(__dirname, '/src/Templates'),
             '@pages': path.resolve(__dirname,'/src/Pages'),
             '@routes': path.resolve(__dirname,'/src/Routes')
         }
