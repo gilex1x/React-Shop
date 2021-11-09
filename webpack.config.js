@@ -9,20 +9,8 @@ module.exports ={
         path: path.resolve(__dirname,'build'),
         filename: 'bundle.js',
         publicPath: '/'
-    },
-    resolve:{
-        extensions:['.js','.jsx'],
-        alias:{
-            '@assets':path.resolve(__dirname,'/src/Assets'),
-            '@actions': path.resolve(__dirname,('/src/Redux/Actions')),
-            '@reducers': path.resolve(__dirname,('/src/Redux/Reducers')),
-            '@styles':path.resolve(__dirname,'/src/Assets/styles'),
-            '@images': path.resolve(__dirname,'/src/Assets/images'),
-            '@components':path.resolve(__dirname,'/src/Components'),
-            '@template':path.resolve(__dirname, '/src/Templates'),
-            '@pages': path.resolve(__dirname,'/src/Pages'),
-            '@routes': path.resolve(__dirname,'/src/Routes')
-        }
+    }, resolve:{
+        extensions:['.js','.jsx']
     },
     module:{
         rules:[
