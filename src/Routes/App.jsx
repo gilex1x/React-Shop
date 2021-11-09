@@ -1,19 +1,19 @@
 import React from 'react';
 import { BrowserRouter,Switch,Route } from 'react-router-dom'
-import About from '@pages/About';
-import Home from '@pages/Home';
-import Produc from '@pages/Produc';
-import Layout from '@template/Layout';
-import '@styles/index.css';
+import About from '../Pages/About';
+import Home from '../Pages/Home';
+import Produc from '../Pages/Produc';
+import Layout from '../Template/Layout';
+import '../Assets/Styles/index.css';
 
 
-const Apps = () => {
+const App = () => {
     return (
     <BrowserRouter>
         <Layout>
             <Switch>
                 <Route exact path='/' component={Home}/>
-                <Route exact path='/producto' component={Produc}/>
+                <Route exact path='/:productId' component={Produc}/>
                 <Route exact path='/Nosotros' component={About}/>
             </Switch>
         </Layout>
@@ -21,4 +21,4 @@ const Apps = () => {
     );
 }
 
-export default Apps;
+export default App;

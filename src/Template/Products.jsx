@@ -1,5 +1,5 @@
 import React from 'react'
-import '@styles/Products.css'
+import '../Assets/Styles/Products.css'
 
 const Products = ({children}) => {
     return (

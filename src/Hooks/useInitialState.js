@@ -1,9 +1,9 @@
-import {useEffect,useState} from 'React';
+import {useEffect,useState} from 'react';
 
-const useInitialState=(API)=>{
-    const [items,setItems]=useState({});
-    useEffect(()=>{
-        fetch(API)
+const useInitialState= (API)=>{
+    const [items,setItems]=useState([]);
+    useEffect(async ()=>{
+      await fetch(`${API}/api/v1/products`)
             .then(response=>response.json())
             .then(data=>setItems(data))
     },[]);

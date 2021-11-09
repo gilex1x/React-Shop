@@ -1,12 +1,12 @@
 import React from 'react';
-import {useState} from 'react';
-import '@styles/Card.css';
-import Image from '@images/PinUmbrella.jpg';
 import { Link } from 'react-router-dom';
+import {useState} from 'react';
+import Image from '../Assets/Images/PinUmbrella.jpg';
+import '../Assets/Styles/Card.css';
 
 
 
-const Card = () => {
+const Card = ({nombre,price,productId}) => {
     const [car,setCar]=useState('AGREGAR AL CARRITO');
     const handleClick=()=>{
         if(car=='AGREGAR AL CARRITO'){
@@ -16,16 +16,19 @@ const Card = () => {
         }
     }
     return (
-        <Link className='card' to='/producto'>
+        <div className='card'>
+            <Link  to={`/${productId}`}>
             <div className='card-image' >
                 <img src={Image}/>
             </div>
             <div className='card-description'>
-                <h3>Nombre producto</h3>
-                <span>Precio</span>
-                <button onClick={handleClick}>{car}</button>
+                <h3>{nombre}</h3>
+                <span>{price}</span>
             </div>
-        </Link>
+            </Link>
+           
+                <button onClick={handleClick}>{car}</button>
+        </div>
     );
 }
 
