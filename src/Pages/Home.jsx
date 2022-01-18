@@ -1,19 +1,19 @@
 import React from 'react';
-import Products from '../Templates/Products'
+import { connect } from 'react-redux';
+import Products from '../Templates/Products';
 
+const Home = ({productList}) => {
+	return (
+		<React.Fragment>
+			<h1>Soy el Home</h1>
+			<Products products={productList}/>
+		</React.Fragment>
+	);
+};
+const mapStateToProps = (state) => {
+	return {
+		productList: state.productList,
+	};
+};
 
-
-
-const Home = () => {
-   
-    return (
-        <React.Fragment>
-            <h1>Soy el Home</h1>
-            <Products/>
-        </React.Fragment>
-        
-    );
-}
-
-
-export default Home;
+export default connect(mapStateToProps, null)(Home);

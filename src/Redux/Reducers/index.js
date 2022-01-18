@@ -1,9 +1,13 @@
-const reducer=(state,action)=>{
-    switch(action.type){
-        default:
-            return state;
-    }
-}
+const reducer = (state, action) => {
+	switch (action.type) {
+        case 'SET_DATA_PRODUCTS':
+            return{
+                ...state,
+                productList:action.payload
+            }
+		default:
+			return state;
+	}
+};
 
-
-export default reducer
+export default reducer;

@@ -1,9 +1,7 @@
-import React,{useContext} from 'react'
-import CartContext from '../Hooks/Context/CartContext';
-import Logo from '../Assets/Images/SkullGeek.png'
-import '../Assets/Styles/Header.css';
+import React from 'react'
+import Logo from 'Images/SkullGeek.png'
+import 'Styles/Header.css';
 const Header = () => {
-    const cart= useContext(CartContext);
     return (
         <header className='header'>
             <nav className='nav-container'>
@@ -21,9 +19,9 @@ const Header = () => {
                     <li className='nav-menu__item'>
                         Nosotros
                     </li>
-                    <li className='nav-menu__item'>
+                    {/* <li className='nav-menu__item'>
                         carrito: {cart.length}
-                    </li>
+                    </li> */}
                 </ul>
             </nav>
         </header>

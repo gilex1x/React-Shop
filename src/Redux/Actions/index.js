@@ -8,7 +8,10 @@ export const removeFromCart= payload =>({
     payload,
 });
 
-export const getProducts=payload=>({
-    type: 'GET_PRODUCTS',
+export const setDataProducts=payload=>({
+    type: 'SET_DATA_PRODUCTS',
     payload,
-})
+});
+
+
+
