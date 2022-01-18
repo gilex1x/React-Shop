@@ -1,11 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom';
+import {Provider} from 'react-redux';
+import {createStore} from 'redux';
 import App from './Routes/App';
-import CartContext from './Hooks/Context/CartContext';
 
 
+const store=createStore();
 ReactDOM.render(
-    <CartContext.Provider value={[]}>
+
+    <Provider store={store}>
         <App/>
-    </CartContext.Provider>,document.getElementById('root'));
+    </Provider>,document.getElementById('root'));
 
