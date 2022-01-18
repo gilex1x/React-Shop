@@ -1,11 +1,11 @@
 import React from 'react';
 import { BrowserRouter,Switch,Route } from 'react-router-dom'
-import About from '../Pages/About';
-import Home from '../Pages/Home';
-import Product from '../Pages/Product';
+import About from 'Pages/About';
+import Home from 'Pages/Home';
+import Product from 'Pages/Product';
 import Layout from '../Templates/Layout';
-import ShipForm from '../Pages/ShipForm';
-import '../Assets/Styles/index.css';
+import ShipForm from 'Pages/ShipForm';
+import 'Styles/index.css';
 
 
 const App = () => {
