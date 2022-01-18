@@ -18,7 +18,8 @@ module.exports = {
 			Actions: path.resolve(__dirname, 'src/Redux/Actions'),
 			Styles: path.resolve(__dirname, 'src/Assets/Styles'),
 			Images: path.resolve(__dirname, 'src/Assets/Images'),
-            Pages: path.resolve(__dirname,'src/Pages')
+            Pages: path.resolve(__dirname,'src/Pages'),
+			Hooks: path.resolve(__dirname,'src/Hooks')
 		},
 	},
 	module: {
