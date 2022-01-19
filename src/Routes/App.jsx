@@ -14,6 +14,7 @@ import 'Styles/index.css';
 const App = () => {
     const dispatch = useDispatch();
     let data=[]
+    
     useEffect(async()=>{
         data =await createInitialState('http://localhost:3030');
         dispatch(setDataProducts(data));

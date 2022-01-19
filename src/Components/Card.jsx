@@ -1,35 +1,45 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import {useState} from 'react';
+import { addToCart, removeFromCart } from 'Actions/index';
 import Image from '../Assets/Images/PinUmbrella.jpg';
-import '../Assets/Styles/Card.css';
+import 'Styles/Card.css';
 
+const Card = ({ item }) => {
+	const { nombre, price, productId } = item;
+	const dispatch = useDispatch();
+	const cartData = useSelector((state) => state.cart);
+	const [label, setLabel] = useState('Agregar carro');
+	const handleAdd = () => {
+		dispatch(addToCart(item));
+		setLabel('Eliminar Carro');
+	};
+	const handleDelete = () => {
+		dispatch(removeFromCart(productId));
+		setLabel('Agregar Carro');
+	};
+	const handleClick = () => {
+		if (cartData.includes(item)) {
+		} else {
+		}
+	};
+	return (
+		<div className='card'>
+			<Link to={`/${productId}`}>
+				<div className='card-image'>
+					<img src={Image} />
+				</div>
+				<div className='card-description'>
+					<h3>{nombre}</h3>
+					<span>{price}</span>
+				</div>
+			</Link>
 
-
-const Card = ({nombre,price,productId}) => {
-    const [car,setCar]=useState('AGREGAR AL CARRITO');
-    const handleClick=()=>{
-        if(car=='AGREGAR AL CARRITO'){
-            setCar('ELIMINAR')
-        }else{
-            setCar('AGREGAR AL CARRITO')
-        }
-    }
-    return (
-        <div className='card'>
-            <Link  to={`/${productId}`}>
-            <div className='card-image' >
-                <img src={Image}/>
-            </div>
-            <div className='card-description'>
-                <h3>{nombre}</h3>
-                <span>{price}</span>
-            </div>
-            </Link>
-           
-                <button onClick={handleClick}>{car}</button>
-        </div>
-    );
-}
+			<button onClick={cartData.includes(item) ? handleDelete : handleAdd}>
+				{label}
+			</button>
+		</div>
+	);
+};
 
 export default Card;

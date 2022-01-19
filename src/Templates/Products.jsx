@@ -8,7 +8,7 @@ const Products = ({ products }) => {
 			{products.length == 0 ? (
 				<h2>...Loading</h2>
 			) : (
-				products.map((item) => <Card key={item.productId} {...item} />)
+				products.map((item) => <Card key={item.productId} item={item} />)
 			)}
 		</section>
 	);

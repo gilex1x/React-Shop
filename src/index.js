@@ -11,7 +11,7 @@ const state={
     productList:[],
     cart:[]
 }
-const dev = window.__REDUX_DEVTOOLS_EXTENSION_ && window._REDUX_DEVTOOLS_EXTENSION__();
+const dev =  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__();
 const store=createStore(reducer,state,dev);
 
 ReactDOM.render(
