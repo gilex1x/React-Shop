@@ -1,8 +1,9 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import { useSelector } from 'react-redux';
 import Products from '../Templates/Products';
 
-const Home = ({productList}) => {
+const Home = (props) => {
+	const {productList}=useSelector(state=>state)
 	return (
 		<React.Fragment>
 			<h1>Soy el Home</h1>
@@ -16,4 +17,4 @@ const mapStateToProps = (state) => {
 	};
 };
 
-export default connect(mapStateToProps, null)(Home);
+export default Home;

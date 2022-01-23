@@ -1,5 +1,5 @@
 import React,{useEffect} from 'react';
-import { BrowserRouter,Switch,Route } from 'react-router-dom';
+import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import {useDispatch} from 'react-redux';
 import {setDataProducts} from 'Actions/index'
 import { createInitialState} from '../Utils/CreateInitialState';
@@ -23,12 +23,12 @@ const App = () => {
     return (
     <BrowserRouter>
         <Layout>
-            <Switch>
-                <Route exact path='/' component={Home}/>
-                <Route exact path='/nosotros' component={About}/>
-                <Route exact path='/confirmar-compra' component={ShipForm}/>
-                <Route exact path='/:productId' component={Product}/>
-            </Switch>
+            <Routes>
+                <Route  path='/' element={<Home/>}/>
+                <Route  path='/nosotros' element={<About/>}/>
+                <Route  path='/confirmar-compra' element={<ShipForm/>}/>
+                <Route  path='/:productId' element={<Product/>}/>
+            </Routes>
         </Layout>
     </BrowserRouter>
     );
