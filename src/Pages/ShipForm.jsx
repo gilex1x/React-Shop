@@ -1,5 +1,5 @@
 import React, {useRef} from 'react';
-import '../Assets/Styles/Form.css';
+import 'Styles/Form.css';
 
 const ShipForm = () => {
     const myForm=useRef(null);
