@@ -11,10 +11,6 @@ const Home = (props) => {
 		</React.Fragment>
 	);
 };
-const mapStateToProps = (state) => {
-	return {
-		productList: state.productList,
-	};
-};
+
 
 export default Home;

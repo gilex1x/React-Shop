@@ -4,6 +4,7 @@
     --main-grey: #E0E0E0  ;
     --main-white: #FAFAFA ;
     --main-blue: #283593;
+    --borders: 8px;
 }
 
 body{
@@ -11,6 +12,7 @@ body{
     margin:0;
     background: var(--main-white);
     color: var(--main-black);
+    font-family: 'Roboto', sans-serif;
 }
 
 a{

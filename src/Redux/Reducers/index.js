@@ -13,8 +13,13 @@ const reducer = (state, action) => {
 		case 'REMOVE_FROM_CART':
 			return {
 				...state,
-				cart: state.cart.filter((item) => item.id != action.payload),
+				cart: state.cart.filter((item) => item.productId != action.payload),
 			};
+		case 'GET_PRODUCT_DATA':
+			return{
+				...state,
+				product: state.productList.filter((item) => item.productId == action.payload)[0],
+			}
 		default:
 			return state;
 	}

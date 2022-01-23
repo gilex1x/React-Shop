@@ -1,10 +1,16 @@
-import React from 'react'
+import React from "react";
+import { useSelector, useDispatch } from "react-redux";
 
 
-const Product = ({product}) => {
-    return (
-        <h1>Soy un producto</h1>
-    );
-}
+const Product = (props) => {
+  const { product } = useSelector((state) => state);
+  return (
+    <>
+      <h2>{product.nombre}</h2>
+      <span>Imagen</span>
+      <span>Descripcion</span>
+    </>
+  );
+};
 
 export default Product;

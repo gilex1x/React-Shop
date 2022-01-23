@@ -1,7 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const { ENGINE_METHOD_PKEY_ASN1_METHS } = require('constants');
+
 
 module.exports = {
 	mode: 'development',
@@ -19,7 +19,8 @@ module.exports = {
 			Styles: path.resolve(__dirname, 'src/Assets/Styles/'),
 			Images: path.resolve(__dirname, 'src/Assets/Images/'),
             Pages: path.resolve(__dirname,'src/Pages/'),
-			Hooks: path.resolve(__dirname,'src/Hooks/')
+			Hooks: path.resolve(__dirname,'src/Hooks/'),
+			Components: path.resolve(__dirname,'src/Components')
 		},
 	},
 	module: {

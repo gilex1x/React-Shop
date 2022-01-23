@@ -8,7 +8,6 @@ import Home from 'Pages/Home';
 import Product from 'Pages/Product';
 import Layout from '../Templates/Layout';
 import ShipForm from 'Pages/ShipForm';
-import 'Styles/index.css';
 
 
 const App = () => {
@@ -27,7 +26,7 @@ const App = () => {
                 <Route  path='/' element={<Home/>}/>
                 <Route  path='/nosotros' element={<About/>}/>
                 <Route  path='/confirmar-compra' element={<ShipForm/>}/>
-                <Route  path='/:productId' element={<Product/>}/>
+                <Route  path='/productos/:productId' element={<Product/>}/>
             </Routes>
         </Layout>
     </BrowserRouter>

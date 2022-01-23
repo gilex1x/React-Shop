@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
-import { addToCart, removeFromCart } from 'Actions/index';
+import { useNavigate} from 'react-router-dom';
+import { addToCart, removeFromCart,getProductData } from 'Actions/index';
 import Image from '../Assets/Images/PinUmbrella.jpg';
 import 'Styles/Card.css';
 
 const Card = ({ item }) => {
 	const { nombre, price, productId } = item;
 	const dispatch = useDispatch();
+	const navigate=useNavigate();
 	const cartData = useSelector((state) => state.cart);
 	const [label, setLabel] = useState('Agregar carro');
 	const handleAdd = () => {
@@ -18,14 +19,13 @@ const Card = ({ item }) => {
 		dispatch(removeFromCart(productId));
 		setLabel('Agregar Carro');
 	};
-	const handleClick = () => {
-		if (cartData.includes(item)) {
-		} else {
-		}
-	};
+	const handleClick=()=>{
+		dispatch(getProductData(productId));
+		navigate(`/productos/${productId}`);
+	}
 	return (
 		<div className='card'>
-			<Link to={`/${productId}`}>
+			<button onClick={handleClick}>
 				<div className='card-image'>
 					<img src={Image} />
 				</div>
@@ -33,7 +33,7 @@ const Card = ({ item }) => {
 					<h3>{nombre}</h3>
 					<span>{price}</span>
 				</div>
-			</Link>
+			</button>
 
 			<button onClick={cartData.includes(item) ? handleDelete : handleAdd}>
 				{label}
